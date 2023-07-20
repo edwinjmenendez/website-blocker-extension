@@ -1,13 +1,24 @@
 {
-  "manifest_version": 3,
+  "manifest_version": 2,
   "name": "Hello Extensions",
   "description": "Base Level Extension",
   "version": "1.0",
-  "action": {
+  "browser_action": {
     "default_popup": "index.html",
     "default_title": "Open"
   },
   "permissions": [
-    "scripting"
-  ]
+    "declarativeNetRequest",
+    "declarativeNetRequestFeedback",
+    "webRequest",
+    "webRequestBlocking",
+    "storage",
+    "<all_urls>"
+  ],
+  "background": {
+    "scripts": ["background.js"],
+    "persistent": true
+  },
+  "content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self'"
+
 }
