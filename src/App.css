@@ -10,8 +10,11 @@
 .websites-container {
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 .websites {
+  margin-top: 30px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -44,4 +47,43 @@
 
 .icon img {
   width: 25px;
+}
+
+
+/* Updated styles for input and button */
+input[type="url"] {
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+  border: none;
+  outline: none;
+  padding: 8px 12px;
+  border-radius: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  transition: box-shadow 0.3s ease;
+}
+
+input[type="url"]:focus {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+button {
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  outline: none;
+  padding: 10px 20px;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+.input-button {
+  display: flex;
+  gap: 20px;
 }

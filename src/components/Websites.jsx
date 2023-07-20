@@ -18,16 +18,11 @@ const Websites = () => {
     const updatedWebsites = websites.filter((website) => website.webUrl !== webUrlToDelete);
     setWebsites(updatedWebsites);
     updateLocalStorage(updatedWebsites); // Save the updated websites array to local storage
-    updateBackgroundScript(updatedWebsites);
-  };
-
-  const updateBackgroundScript = async (updatedWebsites) => {
-    console.log(updatedWebsites);
-    await chrome.runtime.sendMessage({ action: "updateWebRequestListener", blockedWebsites: updatedWebsites });
   };
 
   const updateLocalStorage = async (updatedWebsites) => {
     await chrome.storage?.local.set({ blockedWebsites: updatedWebsites });
+    await chrome.runtime.sendMessage({ action: "updateWebRequestListener", blockedWebsites: updatedWebsites });
   };
 
   useEffect(() => {
@@ -38,9 +33,10 @@ const Websites = () => {
 
   return (
     <div className='websites-container'>
+        <h1>Website blocker </h1>
       <AddWebsite addWebsite={addWebsite} />
       <div className='websites'>
-        <h2>Websites to block while working</h2>
+        <h3>Websites to block while working</h3>
         {websites.map(({ webUrl }) => (
           <Website key={webUrl} webUrl={webUrl} onDelete={handleDeleteWebsite} />
         ))}
