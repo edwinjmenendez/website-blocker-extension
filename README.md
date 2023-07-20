@@ -1,70 +1,45 @@
-# Getting Started with Create React App
+# Website Blocker Chrome Extension
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+The Website Blocker Chrome Extension allows you to block access to specific websites while you work, helping you stay focused and productive. You can add and remove websites from the blocked list, and the extension will prevent you from accessing the blocked websites during work sessions.
 
-## Available Scripts
+## Installation
 
-In the project directory, you can run:
+1. Clone or download the repository to your local machine.
 
-### `npm start`
+2. Open a terminal and navigate to the extension directory.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+3. Install the required dependencies by running the following command:
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+   ```bash
+   npm install
+   ```
 
-### `npm test`
+4. Build the extension by running the following command:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+    ```bash
+   npm run build
+   ```
 
-### `npm run build`
+5. Open Google Chrome browser and navigate to `chrome://extensions`.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+6. Enable the "Developer mode" by toggling the switch located at the top right corner of the page.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+7. Click on the "Load unpacked" button and select the build folder from the extension directory.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+8. The Website Blocker extension should now be added to your Chrome browser.
 
-### `npm run eject`
+## How to Use
+1. **Block a Website:**
+   - Click on the extension icon in the Chrome toolbar to open the extension popup.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+   - In the popup, you will find an input field where you can enter the website URL that you want to block. For example, if you want to block access to `facebook.com`, enter `facebook.com` in the input field.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+   - Press the "Block Website" button to add the website to the blocked list.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+   - The website is now blocked, and if you try to access it, you will be redirected to a blank page.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+2. **Unblock a Website:**
+   - To unblock a website, click on the "Delete" button next to the blocked website in the list. The website will be removed from the blocked list, and you will be able to access it again.
 
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+3. **Add Multiple Websites:**
+   - You can add multiple websites to the blocked list by repeating the steps above.
