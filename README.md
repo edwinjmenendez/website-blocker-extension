@@ -43,3 +43,10 @@ The Website Blocker Chrome Extension allows you to block access to specific webs
 
 3. **Add Multiple Websites:**
    - You can add multiple websites to the blocked list by repeating the steps above.
+
+## Note
+Please be aware that there is currently an issue that might prevent you from accessing websites that have been deleted from the block list. In order to unblock all websites and view them normally, the block list must be empty. Didn't want to further delay this assignment so I left it as is. Thank you for your understanding.
+
+
+
+
